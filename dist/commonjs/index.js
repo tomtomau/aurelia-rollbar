@@ -15,82 +15,40 @@ var RollbarAppender = (function () {
 
   _createClass(RollbarAppender, [{
     key: 'error',
-    value: function error(logger) {
+    value: function error(logger, _error) {
       var rollbar = this.getRollbar();
 
       if (typeof rollbar !== 'undefined') {
-        var _iteratorNormalCompletion = true;
-        var _didIteratorError = false;
-        var _iteratorError = undefined;
-
-        try {
-          for (var _len = arguments.length, errors = Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {
-            errors[_key - 1] = arguments[_key];
-          }
-
-          for (var _iterator = errors[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
-            var error = _step.value;
-
-            rollbar.error(error);
-          }
-        } catch (err) {
-          _didIteratorError = true;
-          _iteratorError = err;
-        } finally {
-          try {
-            if (!_iteratorNormalCompletion && _iterator['return']) {
-              _iterator['return']();
-            }
-          } finally {
-            if (_didIteratorError) {
-              throw _iteratorError;
-            }
-          }
-        }
+        rollbar.error(_error);
       }
     }
   }, {
     key: 'info',
-    value: function info(logger) {}
-  }, {
-    key: 'warn',
-    value: function warn(logger) {
+    value: function info(logger, _info) {
       var rollbar = this.getRollbar();
 
       if (typeof rollbar !== 'undefined') {
-        var _iteratorNormalCompletion2 = true;
-        var _didIteratorError2 = false;
-        var _iteratorError2 = undefined;
+        rollbar.info(_info);
+      }
+    }
+  }, {
+    key: 'warn',
+    value: function warn(logger, warning) {
+      var rollbar = this.getRollbar();
 
-        try {
-          for (var _len2 = arguments.length, warnings = Array(_len2 > 1 ? _len2 - 1 : 0), _key2 = 1; _key2 < _len2; _key2++) {
-            warnings[_key2 - 1] = arguments[_key2];
-          }
-
-          for (var _iterator2 = warnings[Symbol.iterator](), _step2; !(_iteratorNormalCompletion2 = (_step2 = _iterator2.next()).done); _iteratorNormalCompletion2 = true) {
-            var warning = _step2.value;
-
-            rollbar.warning(warning);
-          }
-        } catch (err) {
-          _didIteratorError2 = true;
-          _iteratorError2 = err;
-        } finally {
-          try {
-            if (!_iteratorNormalCompletion2 && _iterator2['return']) {
-              _iterator2['return']();
-            }
-          } finally {
-            if (_didIteratorError2) {
-              throw _iteratorError2;
-            }
-          }
-        }
+      if (typeof rollbar !== 'undefined') {
+        rollbar.warning(warning);
       }
     }
   }, {
     key: 'debug',
-    value: function debug() {}
+    value: function debug(logger, _debug) {
+      var rollbar = this.getRollbar();
+
+      if (typeof rollbar !== 'undefined') {
+        rollbar.debug(_debug);
+      }
+    }
   }, {
     key: 'getRollbar',
     value: function getRollbar() {

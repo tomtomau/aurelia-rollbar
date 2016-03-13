@@ -3,30 +3,36 @@ export class RollbarAppender {
     // @TODO: Maybe do something here to check for Rollbar?
   }
 
-  error(logger, ...errors) {
+  error(logger, error) {
     let rollbar = this.getRollbar();
 
     if (typeof rollbar !== 'undefined') {
-      for (let error of errors) {
-        rollbar.error(error);
-      }
+      rollbar.error(error);
     }
   }
 
-  info(logger, ...rest) {
-  }
-
-  warn(logger, ...warnings) {
+  info(logger, info) {
     let rollbar = this.getRollbar();
 
     if (typeof rollbar !== 'undefined') {
-      for (let warning of warnings) {
-        rollbar.warning(warning);
-      }
+      rollbar.info(info);
     }
   }
 
-  debug() {
+  warn(logger, warning) {
+    let rollbar = this.getRollbar();
+
+    if (typeof rollbar !== 'undefined') {
+      rollbar.warning(warning);
+    }
+  }
+
+  debug(logger, debug) {
+    let rollbar = this.getRollbar();
+
+    if (typeof rollbar !== 'undefined') {
+      rollbar.debug(debug);
+    }
   }
 
   getRollbar() {
