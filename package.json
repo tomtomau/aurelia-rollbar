@@ -13,10 +13,10 @@
   },
   "license": "CC0-1.0",
   "author": "Tom Newby <me@tomnewby.net>",
-  "main": "dist/commonjs/index.js",
+  "main": "dist/commonjs/rollbar-appender.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/tomtomau/aurelia-rollbar"
+    "url": "https://github.com/tomtomau/index"
   },
   "devDependencies": {
     "aurelia-tools": "^0.1.18",
