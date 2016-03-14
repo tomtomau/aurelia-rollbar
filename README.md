@@ -6,7 +6,7 @@ Integrate [Rollbar](https://rollbar.com/) with [Aurelia](http://aurelia.io/) Jav
 
 This package is installed using JSPM.
 
-`jspm install aurelia-rollbar=github:tomtomau/aurelia-rollbar@^0.1.0`
+`jspm install aurelia-rollbar=npm:aurelia-rollbar@^0.1.0`
 
 ## Usage
 To use aurelia-rollbar, begin by installing the package as above, and then add it as a LogAppender into the Aurelia LogManager:

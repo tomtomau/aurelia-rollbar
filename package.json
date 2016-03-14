@@ -1,6 +1,6 @@
 {
   "name": "aurelia-rollbar",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "LogAppender for Aurelia + Rollbar",
   "keywords": [
     "aurelia",
