@@ -1,5 +1,7 @@
 # aurelia-rollbar
 
+[![Join the chat at https://gitter.im/tomtomau/aurelia-rollbar](https://badges.gitter.im/tomtomau/aurelia-rollbar.svg)](https://gitter.im/tomtomau/aurelia-rollbar?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 Integrate [Rollbar](https://rollbar.com/) with [Aurelia](http://aurelia.io/) Javascript framework using a LogAppender.
 
 ## Installation
